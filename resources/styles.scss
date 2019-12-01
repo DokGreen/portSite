@@ -1,0 +1,248 @@
+/*----------MIXINS*/
+@mixin flexIt($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+/*----------VARIABLES*/
+$width: 80vw;
+$font: Arial, Helvetica, sans-serif;
+$maincol: #05396B;
+
+/*-------------------------------NAV*/
+.nav {
+    @include flexIt(space-between);
+    position: fixed;
+    top: -1vw;
+    left: 10vw;
+    width: $width;
+    height: 5vw;
+    margin: 1vw auto;
+    padding: 0 1vw 0 1vw;
+    font-size: 1.5vw;
+    font-family: $font;
+    color: $maincol;
+    transition: all 500ms ease-in-out;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    div {
+        width: 8vw;
+    }
+    p {
+        font-weight: 600;
+    }
+}
+
+#siteNav {
+    @include flexIt(space-between);
+    height: 1.5vw;
+    width: 30vw;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+
+    li {
+        padding-top: 1.2vw;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, color 0.5s ease-in;
+
+        a {
+            color: $maincol;
+            transition: transform 0.3s ease-in-out, color 0.5s ease-in;
+
+            &:hover {
+
+            }
+        }
+
+        &:hover {
+            transform: translateY(-1.3vw);
+        }
+    }
+}
+
+#mediaNav {
+    @include flexIt(space-around);
+    width: 8vw;
+    font-size: 2vw;
+}
+
+#about::after {
+    content: " About";
+}
+#port::after {
+    content: " Portfolio";
+}
+#skill::after {
+    content: " Skills";
+}
+#cont::after {
+    content: " Contact";
+}
+
+#mobileNav {
+    display: none;
+}
+
+.navmve {
+    box-shadow: 0px 0px 10px #000;
+    background-color:rgba(255,255,255,0.5);
+}
+
+/*-----------------------------HEADER*/
+#header {
+    position: relative;
+    width: 100vw;
+    height: 50vw;
+    font-family: $font;
+    font-weight: 900;
+    z-index: -20;
+    color: #fff;
+    background-color: #5CDB94;
+}
+
+.txt {
+    position: absolute;
+    width: 100vw;
+    top: 40%;
+    left: 11%;
+    font-size: 6vw;
+    z-index: -2;
+
+}
+
+.pc {
+    position: absolute;
+    width: 60vw;
+    top: 15%;
+    left: -18%;
+    z-index: -3;
+    transform: rotate(25deg);
+}
+
+.coffee {
+    position: absolute;
+    width: 25vw;
+    top: 20%;
+    left: 80%;
+    z-index: -4;
+    transform: rotate(-20deg);
+}
+
+.tablet {
+    position: absolute;
+    width: 20vw;
+    top: 5%;
+    left: 55%;
+    z-index: -3;
+    transform: rotate(40deg);
+}
+
+.plant {
+    position: absolute;
+    width: 10vw;
+    top: 55%;
+    left: 65%;
+    z-index: -1;
+}
+
+.test {
+    width: 100vw;
+    height: 80vw;
+    margin: 0 auto;
+    background-color: blue;
+}
+
+
+
+
+/*----------------------Break 1*/
+@media only screen and (max-width: 822px) {
+    html{
+        background-color: red;
+    }
+/*------------------------------NAV*/
+    #nav {
+        div {
+            width: 12vw;
+        }
+    }
+
+    #siteNav {
+        @include flexIt(space-between);
+        width: 40vw;
+        height: 2.2vw;
+        font-size: 2.5vw;
+
+        li {
+            padding-top: 2.5vw;
+
+            &:hover {
+                transform: translateY(-2.5vw);
+            }
+        }
+    }
+    
+    #mediaNav {
+        @include flexIt(space-around);
+        width: 12vw;
+        font-size: 3vw;
+    }
+
+    /*----------------------------HEADER*/
+    #header {
+        height: 71.7vw;
+    }
+}
+/*-----------------------Break 2*/
+@media only screen and (max-width: 500px) {
+    html{
+        background-color: green;
+    }
+}
+/*-----------------------Mobile*/
+@media only screen and (max-width: 480px) {
+    html{
+        background-color: purple;
+    }
+    /*---------------------NAV*/
+    #nav {
+        @include flexIt(center);
+
+        div {
+            display: none;
+        }
+    }
+
+    #siteNav {
+        display: none;
+    }
+
+    #mediaNav {
+        display: none;
+    }
+
+    #mobileNav {
+        @include flexIt(space-around);
+        width: 100%;
+        font-size: 5vw;
+    }
+
+    /*----------------------------HEADER*/
+    #header {
+        height: 100vw;
+    }
+}
