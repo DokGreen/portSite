@@ -11,7 +11,11 @@ window.addEventListener("scroll", () => {
         nav.classList.remove("navmve");
     }
 
-    console.log(top);
+    parallax("#header", window.scrollY, 1);
+    parallax(".pc", window.scrollY, 2.5, 25);
+    parallax(".coffee", window.scrollY, -0.7, -20);
+    parallax(".tablet", window.scrollY, 5, 40);
+    parallax(".plant", window.scrollY, -2, 0);
 })
 
 
@@ -20,11 +24,3 @@ function parallax(e, d, s, r) {
     const item = document.querySelector(e);
     item.style.transform = `translateY(${d * s}px) rotate(${r}deg)`;
 }
-
-window.addEventListener("scroll", () => {
-    parallax("#header", window.scrollY, 1);
-    parallax(".pc", window.scrollY, 2.5, 25);
-    parallax(".coffee", window.scrollY, -0.7, -20);
-    parallax(".tablet", window.scrollY, 5, 40);
-    parallax(".plant", window.scrollY, -2, 0);
-});

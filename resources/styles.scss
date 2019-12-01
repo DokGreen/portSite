@@ -8,7 +8,8 @@
 /*----------VARIABLES*/
 $width: 80vw;
 $font: Arial, Helvetica, sans-serif;
-$maincol: #05396B;
+$mainCol: #05396B;
+$txtCol: #EDF5E0;
 
 /*-------------------------------NAV*/
 .nav {
@@ -22,7 +23,7 @@ $maincol: #05396B;
     padding: 0 1vw 0 1vw;
     font-size: 1.5vw;
     font-family: $font;
-    color: $maincol;
+    color: $mainCol;
     transition: all 500ms ease-in-out;
 
     ul {
@@ -60,11 +61,11 @@ $maincol: #05396B;
         transition: transform 0.3s ease-in-out, color 0.5s ease-in;
 
         a {
-            color: $maincol;
+            color: $mainCol;
             transition: transform 0.3s ease-in-out, color 0.5s ease-in;
 
             &:hover {
-
+                
             }
         }
 
@@ -110,7 +111,7 @@ $maincol: #05396B;
     font-family: $font;
     font-weight: 900;
     z-index: -20;
-    color: #fff;
+    color: $txtCol;
     background-color: #5CDB94;
 }
 
@@ -159,13 +160,45 @@ $maincol: #05396B;
     z-index: -1;
 }
 
-.test {
+.about {
+    @include flexIt(center);
+    flex-direction: column;
     width: 100vw;
-    height: 80vw;
+    height: 30vw;
     margin: 0 auto;
-    background-color: blue;
+    font-family: $font;
+    color: $txtCol;
+    background-color: $mainCol;
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    p {
+        width: 30vw;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.5vw;
+    }
 }
 
+/*----------------------------PROJECTS*/
+.port {
+    @include flexIt(center);
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.testwrap {
+
+}
+
+.probox {
+
+    img {
+        width: 30vw;
+    }
+}
 
 
 
@@ -206,6 +239,18 @@ $maincol: #05396B;
     #header {
         height: 71.7vw;
     }
+
+    /*----------------------------ABOUT*/
+    .about {   
+        h2 {
+            font-size: 5vw;
+        }
+    
+        p {
+            width: 40vw;
+            font-size: 2.5vw;
+        }
+    }
 }
 /*-----------------------Break 2*/
 @media only screen and (max-width: 500px) {
@@ -244,5 +289,24 @@ $maincol: #05396B;
     /*----------------------------HEADER*/
     #header {
         height: 100vw;
+        text-align: center;
+    }
+
+    .txt {
+        font-size: 10vw;
+    }
+
+    /*---------------------------ABOUT*/
+    .about {
+        height: 50vw;
+
+        h2 {
+            font-size: 8vw;
+        }
+
+        p {
+            width: 60vw;
+            font-size: 4vw;
+        }
     }
 }
