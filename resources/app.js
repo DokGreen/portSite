@@ -24,3 +24,17 @@ function parallax(e, d, s, r) {
     const item = document.querySelector(e);
     item.style.transform = `translateY(${d * s}px) rotate(${r}deg)`;
 }
+
+//get the probox's
+const box = document.querySelectorAll(".probox");
+//console.log(box);
+
+//when hovering zoom photo in and popup txt box
+box.forEach(i => {
+    i.addEventListener('mouseover', e => {
+        let pic = i.children[0];
+        let txt = i.children[1];
+
+        let rect = 
+    })
+})

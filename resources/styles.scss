@@ -10,6 +10,7 @@ $width: 80vw;
 $font: Arial, Helvetica, sans-serif;
 $mainCol: #05396B;
 $txtCol: #EDF5E0;
+$bgCol: #5CDB94;
 
 /*-------------------------------NAV*/
 .nav {
@@ -112,7 +113,7 @@ $txtCol: #EDF5E0;
     font-weight: 900;
     z-index: -20;
     color: $txtCol;
-    background-color: #5CDB94;
+    background-color: $bgCol;
 }
 
 .txt {
@@ -190,14 +191,54 @@ $txtCol: #EDF5E0;
 }
 
 .testwrap {
+    @include flexIt(center);
+    flex-direction: column;
+    height: 100%;
 
 }
 
 .probox {
+    width: 30vw;
+    height: 30vw;
+    overflow: hidden;
+    text-align: center;
 
     img {
         width: 30vw;
     }
+}
+
+.txtBox {
+    width: 20vw;
+    margin:0 auto;
+    padding: 1vw;
+    color: $mainCol;
+    background-color: $bgCol;
+    font-family: $font;
+    border-radius: 1vw;;
+
+    h3 {
+        font-size: 2vw;
+        margin-bottom: 0.5vw;
+    }
+
+    button {
+        margin-top: 1vw;
+        border: solid $mainCol;
+        font-size: 1.2vw;
+        border-radius: 1vw;
+    }
+}
+
+.vCode {
+    margin-right: 1vw;
+    color: $txtCol;
+    background-color: $mainCol;
+}
+
+.vSite {
+    color: $mainCol;
+    background-color: transparent;
 }
 
 
