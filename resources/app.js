@@ -38,10 +38,18 @@ box.forEach(i => {
         let rect = e.target.getBoundingClientRect();
         console.log(rect);
 
-        mouseX = Math.floor(e.clientX);
-        mouseY = Math.floor(e.clientY);
+        mouseX = Math.floor(e.clientX - rect.left);
+        mouseY = Math.floor(e.clientY - rect.top);
 
-        pic.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1.5)`;
+        console.log(mouseX, mouseY);
+
+        imgX = mouseX / 5;
+        imgY = mouseY / 5;
+
+        console.log(imgX, imgY)
+
+        pic.style.filter = "blur(2px)";
+        pic.style.transform = `translate(${imgX}px, ${imgY}px) scale(2)`;
         txt.style.transform = "translateY(-20vw)";
     })
 })
@@ -51,7 +59,7 @@ box.forEach(function(i) {
       //console.log('over'); 
       let pic = i.children[0];
       let txt = i.children[1];
-      
+      pic.style.filter = "blur(0px)";
       pic.style.transform = "scale(1)";
       txt.style.transform = "translateY(0)";
     })
