@@ -257,6 +257,8 @@
 
 .probox img {
   width: 30vw;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .txtBox {
@@ -267,6 +269,8 @@
   background-color: #5CDB94;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 1vw;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .txtBox h3 {

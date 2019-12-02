@@ -35,6 +35,24 @@ box.forEach(i => {
         let pic = i.children[0];
         let txt = i.children[1];
 
-        let rect = 
+        let rect = e.target.getBoundingClientRect();
+        console.log(rect);
+
+        mouseX = Math.floor(e.clientX);
+        mouseY = Math.floor(e.clientY);
+
+        pic.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1.5)`;
+        txt.style.transform = "translateY(-20vw)";
     })
 })
+
+box.forEach(function(i) {
+    i.addEventListener('mouseout', e => {
+      //console.log('over'); 
+      let pic = i.children[0];
+      let txt = i.children[1];
+      
+      pic.style.transform = "scale(1)";
+      txt.style.transform = "translateY(0)";
+    })
+  });
