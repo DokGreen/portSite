@@ -11,6 +11,7 @@ $font: Arial, Helvetica, sans-serif;
 $mainCol: #05396B;
 $txtCol: #EDF5E0;
 $bgCol: #5CDB94;
+$subhead: 5vw;
 
 /*-------------------------------NAV*/
 .nav {
@@ -114,17 +115,18 @@ $bgCol: #5CDB94;
     font-weight: 900;
     z-index: -20;
     color: $txtCol;
+    overflow: hidden;
     background-color: $bgCol;
 }
 
 .txt {
     position: absolute;
-    width: 100vw;
+    width: 80vw;
     top: 40%;
     left: 11%;
+    margin: 0 auto;
     font-size: 6vw;
     z-index: -2;
-
 }
 
 .pc {
@@ -136,20 +138,20 @@ $bgCol: #5CDB94;
     transform: rotate(25deg);
 }
 
-.coffee {
+.tablet {
     position: absolute;
     width: 25vw;
     top: 20%;
-    left: 80%;
+    left: 71%;
     z-index: -4;
     transform: rotate(-20deg);
 }
 
-.tablet {
+.coffee {
     position: absolute;
     width: 20vw;
     top: 5%;
-    left: 55%;
+    left: 52%;
     z-index: -3;
     transform: rotate(40deg);
 }
@@ -158,7 +160,7 @@ $bgCol: #5CDB94;
     position: absolute;
     width: 10vw;
     top: 55%;
-    left: 65%;
+    left: 60%;
     z-index: -1;
 }
 
@@ -173,7 +175,7 @@ $bgCol: #5CDB94;
     background-color: $mainCol;
 
     h2 {
-        font-size: 5vw;
+        font-size: $subhead;
     }
 
     p {
@@ -214,6 +216,7 @@ $bgCol: #5CDB94;
     width: 20vw;
     margin:0 auto;
     padding: 1vw;
+    font-size: 1vw;
     color: $mainCol;
     background-color: $bgCol;
     font-family: $font;
@@ -244,7 +247,35 @@ $bgCol: #5CDB94;
     background-color: transparent;
 }
 
+/*------------------------------SKILLS*/
+.skills {
+    @include flexIt(center);
+    flex-direction: column;
+    width: 100vw;
+    height: 30vw;
+    margin: 0 auto;
+    text-align: center;
+    font-family: $font;
+    color: $txtCol;
+    background-color: $mainCol;
 
+    h1 {
+        font-size: $subhead;
+        margin-bottom: 1.5vw;
+    }
+}
+
+.skillList {
+    @include flexIt(space-around);
+    width: 80vw;
+    font-size: 2.5vw;
+
+    p {
+        text-align: center;
+        padding: 1vw 5vw;
+        border: solid 2px;
+    }
+}
 
 /*----------------------Break 1*/
 @media only screen and (max-width: 822px) {
@@ -293,6 +324,31 @@ $bgCol: #5CDB94;
         p {
             width: 40vw;
             font-size: 2.5vw;
+        }
+    }
+
+    /*--------------------------PROJECTS*/
+    .txtBox {
+        width: 29vw;
+        margin:0 auto;
+        padding: 1vw;
+        font-size: 2vw;
+        color: $mainCol;
+        background-color: $bgCol;
+        font-family: $font;
+        border-radius: 1vw;
+        transition: all 500ms ease-in-out;
+    
+        h3 {
+            font-size: 2.5vw;
+            margin-bottom: 0.5vw;
+        }
+    
+        button {
+            margin-top: 1vw;
+            border: solid $mainCol;
+            font-size: 2.2vw;
+            border-radius: 1vw;
         }
     }
 }

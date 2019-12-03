@@ -13,8 +13,8 @@ window.addEventListener("scroll", () => {
 
     parallax("#header", window.scrollY, 1);
     parallax(".pc", window.scrollY, 2.5, 25);
-    parallax(".coffee", window.scrollY, -0.7, -20);
-    parallax(".tablet", window.scrollY, 5, 40);
+    parallax(".tablet", window.scrollY, -0.7, -20);
+    parallax(".coffee", window.scrollY, 5, 40);
     parallax(".plant", window.scrollY, -2, 0);
 })
 
