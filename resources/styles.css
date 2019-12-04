@@ -126,7 +126,7 @@
 }
 
 /*-----------------------------HEADER*/
-#header {
+.header {
   position: relative;
   width: 100vw;
   height: 50vw;
@@ -360,6 +360,66 @@
   background-color: #05396B;
 }
 
+/*--------------------CONTACT*/
+.contact {
+  position: relative;
+  width: 100vw;
+  height: 30vw;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  z-index: -20;
+  color: #EDF5E0;
+  overflow: hidden;
+  background-color: #5CDB94;
+}
+
+.contact h1 {
+  position: absolute;
+  width: 80vw;
+  top: 10%;
+  left: 11%;
+  margin: 0 auto;
+  font-size: 6vw;
+  z-index: -2;
+}
+
+.contBox {
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  font-size: 2vw;
+}
+
+.mail {
+  margin: 1vw 0;
+}
+
+.minorTxt {
+  width: 20vw;
+  margin: 0 auto;
+  padding: 1vw;
+  font-size: 1vw;
+  line-height: 1.3vw;
+  border-radius: 1vw;
+  color: #5CDB94;
+  background-color: #05396B;
+}
+
+.plane {
+  position: absolute;
+  top: 25%;
+  left: 70%;
+  width: 20vw;
+}
+
+.phone {
+  position: absolute;
+  top: 45%;
+  left: 15%;
+  width: 22vw;
+}
+
 /*----------------------Break 1*/
 @media only screen and (max-width: 822px) {
   html {
@@ -456,6 +516,25 @@
     padding: 0.5vw 0;
     color: #05396B;
     background-color: #EDF5E0;
+  }
+  /*--------------------CONTACT*/
+  .contBox {
+    top: 40%;
+    left: 28.5%;
+    font-size: 2.5vw;
+  }
+  .minorTxt {
+    width: 30vw;
+    margin: 0 auto;
+    padding: 1vw;
+    font-size: 2vw;
+    line-height: 2vw;
+    border-radius: 1vw;
+    color: #5CDB94;
+    background-color: #05396B;
+  }
+  .plane {
+    left: 72%;
   }
 }
 

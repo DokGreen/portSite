@@ -11,7 +11,7 @@ window.addEventListener("scroll", () => {
         nav.classList.remove("navmve");
     }
 
-    parallax("#header", window.scrollY, 1);
+    parallax(".header", window.scrollY, 1);
     parallax(".pc", window.scrollY, 2.5, 25);
     parallax(".tablet", window.scrollY, -0.7, -20);
     parallax(".coffee", window.scrollY, 5, 40);
