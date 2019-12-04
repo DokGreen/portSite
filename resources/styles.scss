@@ -160,7 +160,7 @@ $move: all 500ms ease-in-out;
     left: 60%;
     z-index: -1;
 }
-
+/*-----------------------ABOUT*/
 .about {
     @include flexIt(center);
     flex-direction: column;
@@ -270,7 +270,7 @@ $move: all 500ms ease-in-out;
     p {
         font-size: 1.7vw;
         text-align: center;
-        border: solid 2px $txtCol;
+        border: solid 0.2vw $txtCol;
         width: 50%;
         padding: 0.5vw 0;
         color: $mainCol;
@@ -358,11 +358,110 @@ $move: all 500ms ease-in-out;
             border-radius: 1vw;
         }
     }
+
+    /*------------------------------SKILLS*/
+
+    .skillList {
+        @include flexIt(space-around);
+        width: 80vw;
+        font-size: 2.5vw;
+
+        p {
+            font-size: 2.5vw;
+            width: 50%;
+            padding: 0.5vw 0;
+            color: $mainCol;
+            background-color: $txtCol;
+    }
+}
 }
 /*-----------------------Break 2*/
 @media only screen and (max-width: 500px) {
     html{
         background-color: green;
+    }
+
+    
+
+    /*------------------------HEADER*/
+    .txt {
+        top: 45%;
+        font-size: 8vw;
+        text-align: center;
+    }
+    
+    .pc {
+        width: 70vw;
+        top: 20%;
+        left: -28%;
+    }
+    
+    .tablet {
+        width: 30vw;
+        top: 25%;
+    }
+    
+    .coffee {
+        width: 25vw;
+        top: 5%;
+        left: 50%;
+    }
+    
+    .plant {
+        width: 12vw;
+        top: 70%;
+        left: 60%;
+    }
+
+    /*----------------------------PROJECTS*/
+    .port {
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .testwrap {
+        @include flexIt(center);
+        flex-direction: column;
+        height: 100%;
+
+    }
+
+    .probox {
+        width: 50vw;
+        height: 50vw;
+        overflow: hidden;
+        text-align: center;
+
+        img {
+            width: 50vw;
+            transition: all 500ms ease-in-out;
+        }
+    }
+
+    .txtBox {
+        width: 40vw;
+        font-size: 3vw;
+        transition: all 500ms ease-in-out;
+
+        h3 {
+            font-size: 4vw;
+        }
+
+        button {
+            font-size: 3.2vw;
+            border-radius: 2vw;
+        }
+    }
+
+    .vCode {
+        margin-right: 1vw;
+        color: $txtCol;
+        background-color: $mainCol;
+    }
+
+    .vSite {
+        color: $mainCol;
+        background-color: transparent;
     }
 }
 /*-----------------------Mobile*/

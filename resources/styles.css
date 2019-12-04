@@ -186,6 +186,7 @@
   z-index: -1;
 }
 
+/*-----------------------ABOUT*/
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,7 +346,7 @@
 .skillList p {
   font-size: 1.7vw;
   text-align: center;
-  border: solid 2px #EDF5E0;
+  border: solid 0.2vw #EDF5E0;
   width: 50%;
   padding: 0.5vw 0;
   color: #05396B;
@@ -436,12 +437,111 @@
     font-size: 2.2vw;
     border-radius: 1vw;
   }
+  /*------------------------------SKILLS*/
+  .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80vw;
+    font-size: 2.5vw;
+  }
+  .skillList p {
+    font-size: 2.5vw;
+    width: 50%;
+    padding: 0.5vw 0;
+    color: #05396B;
+    background-color: #EDF5E0;
+  }
 }
 
 /*-----------------------Break 2*/
 @media only screen and (max-width: 500px) {
   html {
     background-color: green;
+  }
+  /*------------------------HEADER*/
+  .txt {
+    top: 45%;
+    font-size: 8vw;
+    text-align: center;
+  }
+  .pc {
+    width: 70vw;
+    top: 20%;
+    left: -28%;
+  }
+  .tablet {
+    width: 30vw;
+    top: 25%;
+  }
+  .coffee {
+    width: 25vw;
+    top: 5%;
+    left: 50%;
+  }
+  .plant {
+    width: 12vw;
+    top: 70%;
+    left: 60%;
+  }
+  /*----------------------------PROJECTS*/
+  .port {
+    width: 100vw;
+    overflow: hidden;
+  }
+  .testwrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .probox {
+    width: 50vw;
+    height: 50vw;
+    overflow: hidden;
+    text-align: center;
+  }
+  .probox img {
+    width: 50vw;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+  }
+  .txtBox {
+    width: 40vw;
+    font-size: 3vw;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+  }
+  .txtBox h3 {
+    font-size: 4vw;
+  }
+  .txtBox button {
+    font-size: 3.2vw;
+    border-radius: 2vw;
+  }
+  .vCode {
+    margin-right: 1vw;
+    color: #EDF5E0;
+    background-color: #05396B;
+  }
+  .vSite {
+    color: #05396B;
+    background-color: transparent;
   }
 }
 
