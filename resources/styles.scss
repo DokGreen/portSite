@@ -12,6 +12,7 @@ $mainCol: #05396B;
 $txtCol: #EDF5E0;
 $bgCol: #5CDB94;
 $subhead: 5vw;
+$move: all 500ms ease-in-out;
 
 /*-------------------------------NAV*/
 .nav {
@@ -26,7 +27,7 @@ $subhead: 5vw;
     font-size: 1.5vw;
     font-family: $font;
     color: $mainCol;
-    transition: all 500ms ease-in-out;
+    transition: $move;
 
     ul {
         list-style-type: none;
@@ -60,15 +61,11 @@ $subhead: 5vw;
         padding-top: 1.2vw;
         cursor: pointer;
         overflow: hidden;
-        transition: transform 0.3s ease-in-out, color 0.5s ease-in;
+        transition: transform 300ms ease-in-out;
 
         a {
             color: $mainCol;
-            transition: transform 0.3s ease-in-out, color 0.5s ease-in;
-
-            &:hover {
-                
-            }
+            transition: transform 300ms ease-in-out;
         }
 
         &:hover {
@@ -271,9 +268,19 @@ $subhead: 5vw;
     font-size: 2.5vw;
 
     p {
+        font-size: 1.7vw;
         text-align: center;
-        padding: 1vw 5vw;
-        border: solid 2px;
+        border: solid 2px $txtCol;
+        width: 50%;
+        padding: 0.5vw 0;
+        color: $mainCol;
+        background-color: $txtCol;
+        transition: $move;
+
+        &:hover {
+            color: $txtCol;
+            background-color: $mainCol;
+        }
     }
 }
 

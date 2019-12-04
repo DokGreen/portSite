@@ -66,18 +66,18 @@
   padding-top: 1.2vw;
   cursor: pointer;
   overflow: hidden;
-  -webkit-transition: color 0.5s ease-in, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.5s ease-in, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.5s ease-in;
-  transition: transform 0.3s ease-in-out, color 0.5s ease-in, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 #siteNav li a {
   color: #05396B;
-  -webkit-transition: color 0.5s ease-in, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.5s ease-in, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.5s ease-in;
-  transition: transform 0.3s ease-in-out, color 0.5s ease-in, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 #siteNav li:hover {
@@ -343,9 +343,20 @@
 }
 
 .skillList p {
+  font-size: 1.7vw;
   text-align: center;
-  padding: 1vw 5vw;
-  border: solid 2px;
+  border: solid 2px #EDF5E0;
+  width: 50%;
+  padding: 0.5vw 0;
+  color: #05396B;
+  background-color: #EDF5E0;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.skillList p:hover {
+  color: #EDF5E0;
+  background-color: #05396B;
 }
 
 /*----------------------Break 1*/
