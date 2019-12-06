@@ -370,6 +370,7 @@
   font-weight: 900;
   z-index: -20;
   color: #EDF5E0;
+  overflow: hidden;
   background-color: #5CDB94;
 }
 
@@ -408,18 +409,16 @@
 
 .plane {
   position: absolute;
-  top: 25%;
+  top: 130%;
   left: 70%;
   width: 20vw;
   z-index: -3;
-  -webkit-transform: translateY(300px);
-          transform: translateY(300px);
 }
 
 .phone {
   position: absolute;
-  top: 45%;
-  left: 15%;
+  top: -330%;
+  left: 10%;
   width: 22vw;
   z-index: -3;
 }
@@ -450,9 +449,6 @@ footer p {
 
 /*----------------------Break 1*/
 @media only screen and (max-width: 822px) {
-  html {
-    background-color: red;
-  }
   /*------------------------------NAV*/
   #nav div {
     width: 12vw;
@@ -562,7 +558,10 @@ footer p {
     background-color: #05396B;
   }
   .plane {
-    left: 72%;
+    left: 75%;
+  }
+  .phone {
+    margin-top: 20vw;
   }
   /*-----------------------FOOTER*/
   footer p {
@@ -573,9 +572,6 @@ footer p {
 
 /*-----------------------Break 2*/
 @media only screen and (max-width: 500px) {
-  html {
-    background-color: green;
-  }
   /*------------------------HEADER*/
   .txt {
     top: 45%;

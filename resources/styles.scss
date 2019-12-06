@@ -294,7 +294,7 @@ $move: all 500ms ease-in-out;
     font-weight: 900;
     z-index: -20;
     color: $txtCol;
-    //overflow: hidden;
+    overflow: hidden;
     background-color: $bgCol;
 
     h1 {
@@ -333,17 +333,16 @@ $move: all 500ms ease-in-out;
 
 .plane {
     position: absolute;
-    top: 25%;
+    top: 130%;
     left: 70%;
     width: 20vw;
     z-index: -3;
-    transform: translateY(300px);
 }
 
 .phone {
     position: absolute;
-    top: 45%;
-    left: 15%;
+    top: -330%;
+    left: 10%;
     width: 22vw;
     z-index: -3;
 }
@@ -367,7 +366,7 @@ footer {
 /*----------------------Break 1*/
 @media only screen and (max-width: 822px) {
     html{
-        background-color: red;
+        //background-color: red;
     }
 /*------------------------------NAV*/
     #nav {
@@ -473,7 +472,11 @@ footer {
     }
 
     .plane {
-        left: 72%
+        left: 75%
+    }
+
+    .phone {
+        margin-top: 20vw;
     }
 
     /*-----------------------FOOTER*/
@@ -489,7 +492,7 @@ footer {
 /*-----------------------Break 2*/
 @media only screen and (max-width: 500px) {
     html{
-        background-color: green;
+        //background-color: green;
     }
 
     

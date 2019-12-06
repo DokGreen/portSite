@@ -20,10 +20,10 @@ window.addEventListener("scroll", () => {
 
     //contact imgs
     parallax(".contact", window.scrollY, 1);
-    //parallax(".plane", -window.scrollY, -2.5, 0);
+    parallax(".plane", (window.scrollY / 35), -8, 0);
+    parallax(".phone", (window.scrollY / 10), 7, 0);
 
-    console.log(-window.scrollY);
-
+    //console.log(-window.scrollY);
 })
 
 
