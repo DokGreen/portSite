@@ -13,7 +13,7 @@ $txtCol: #EDF5E0;
 $bgCol: #5CDB94;
 $subhead: 5vw;
 $move: all 500ms ease-in-out;
-$mobSubHead: 8vw;
+$mobSubHead: 10vw;
 
 /*-------------------------------NAV*/
 .nav {
@@ -675,25 +675,30 @@ footer {
         height: 100vh;
 
         img {
-            width: 80vw;
+            width: 90vw;
         }
     }
 
     .txtBox {
-        width: 60vw;
-        height: 30vw;
+        width: 80vw;
+        height: 50vw;
         padding: 1.5vw;
         font-size: 4vw;
         border-radius: 2vw;;
 
         h3 {
-            font-size: 6vw;
-            margin-top: 2vw;
+            font-size: 7vw;
+            margin-top: 10vw;
+        }
+
+        p {
+            font-size: 4.7vw;
+            margin: 2vw 0 1.5vw 0;
         }
 
         button {
             margin-top: 2vw;
-            font-size: 4.2vw;
+            font-size: 5.2vw;
         }
     }
 
@@ -711,21 +716,66 @@ footer {
     .skillList {
         @include flexIt(space-around);
         flex-direction: column;
-        height: 50vw;
+        height: 60vw;
 
         p {
-            font-size: 4.7vw;
-            width: 60%;
-            padding: 0.5vw 0;
+            font-size: 8.7vw;
+            width: 100%;
+            padding: 1.8vw 0;
+            border: solid 1vw #fff;
         }
     }
 
     .skillList:nth-child(3) {
-        height: 40vw;
-        margin-top: -2vw;
+        height: 50vw;
+        margin-top: -5vw;
 
         p:nth-child(2) {
-            margin-top: -5vw;
+            margin-top: -9vw;
         }
+    }
+
+    /*--------------------CONTACT*/
+    .contact {
+        height: 100vh;
+
+        h1 {
+            top: 25%;
+            margin: 0 auto;
+            font-size: $mobSubHead;
+        }
+    }
+
+    .contBox {
+        top: 40%;
+        left: 3%;
+        font-size: 6vw;
+    }
+
+    .mail {
+        margin: 1vw 0;
+    }
+
+    .minorTxt {
+        width: 60vw;
+        height: 30vw;
+        padding: 1.3vw;
+        margin-top: 5vw;
+        font-size: 5vw;
+        line-height: 4.7vw;
+        border-radius: 2vw;
+    }
+
+    .plane {
+        top: 123%;
+        left: 60%;
+        width: 40vw;
+        z-index: -1;
+    }
+
+    .phone {
+        top: -295%;
+        left: -1%;
+        width: 42vw;
     }
 }

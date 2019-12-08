@@ -63,7 +63,7 @@ box.forEach(i => {
         pic.style.transform = `translate(${imgX}px, ${imgY}px) scale(2)`;
         txt.style.transform = "translateY(-20vw)";
         if(w <= 475){
-            txt.style.transform = "translateY(-55vw)";  
+            txt.style.transform = "translateY(-80vw)";  
         //console.log('mobile');  
       } else {
         txt.style.transform = "translateY(-20vw)";
