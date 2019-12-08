@@ -692,12 +692,59 @@ footer p {
     font-size: 5vw;
   }
   /*----------------------------HEADER*/
-  #header {
+  .header {
+    position: relative;
+    width: 100vw;
     height: 100vw;
-    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    z-index: -20;
+    color: #EDF5E0;
+    overflow: hidden;
+    background-color: #5CDB94;
   }
   .txt {
-    font-size: 10vw;
+    position: absolute;
+    width: 80vw;
+    top: 40%;
+    left: 11%;
+    margin: 0 auto;
+    font-size: 6vw;
+    z-index: -2;
+  }
+  .pc {
+    position: absolute;
+    width: 60vw;
+    top: 15%;
+    left: -18%;
+    z-index: -3;
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  .tablet {
+    position: absolute;
+    width: 25vw;
+    top: 20%;
+    left: 71%;
+    z-index: -4;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  .coffee {
+    position: absolute;
+    width: 20vw;
+    top: 5%;
+    left: 52%;
+    z-index: -3;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  .plant {
+    position: absolute;
+    width: 10vw;
+    top: 55%;
+    left: 60%;
+    z-index: -1;
   }
   /*---------------------------ABOUT*/
   .about {
