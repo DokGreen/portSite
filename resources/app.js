@@ -1,5 +1,8 @@
 //find the navc
 const nav = document.querySelector(".nav");
+const w = window.innerWidth;
+
+//console.log(w);
 
 //on scroll add the new class
 window.addEventListener("scroll", () => {
@@ -44,21 +47,28 @@ box.forEach(i => {
         let txt = i.children[1];
 
         let rect = e.target.getBoundingClientRect();
-        console.log(rect);
+        //console.log(rect);
 
         mouseX = Math.floor(e.clientX - rect.left);
         mouseY = Math.floor(e.clientY - rect.top);
 
-        console.log(mouseX, mouseY);
+        //console.log(mouseX, mouseY);
 
         imgX = mouseX / 5;
         imgY = mouseY / 5;
 
-        console.log(imgX, imgY)
+        //console.log(imgX, imgY)
 
         pic.style.filter = "blur(2px)";
         pic.style.transform = `translate(${imgX}px, ${imgY}px) scale(2)`;
         txt.style.transform = "translateY(-20vw)";
+        if(w <= 475){
+            txt.style.transform = "translateY(-55vw)";  
+        //console.log('mobile');  
+      } else {
+        txt.style.transform = "translateY(-20vw)";
+        //console.log('regular');
+      }
     })
 })
 

@@ -655,9 +655,6 @@ footer p {
 
 /*-----------------------Mobile*/
 @media only screen and (max-width: 480px) {
-  html {
-    background-color: purple;
-  }
   /*---------------------NAV*/
   #nav {
     display: -webkit-box;
@@ -739,14 +736,14 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100vh;
+    height: 200vh;
   }
   .testwrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100%;
+    height: 50%;
     width: 100%;
   }
   .probox {
@@ -761,6 +758,7 @@ footer p {
     height: 30vw;
     padding: 1.5vw;
     font-size: 4vw;
+    border-radius: 2vw;
   }
   .txtBox h3 {
     font-size: 6vw;
@@ -769,6 +767,49 @@ footer p {
   .txtBox button {
     margin-top: 2vw;
     font-size: 4.2vw;
+  }
+  /*------------------------------SKILLS*/
+  .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .skills h1 {
+    font-size: 8vw;
+    margin-bottom: 2.5vw;
+  }
+  .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 50vw;
+  }
+  .skillList p {
+    font-size: 4.7vw;
+    width: 60%;
+    padding: 0.5vw 0;
+  }
+  .skillList:nth-child(3) {
+    height: 40vw;
+    margin-top: -2vw;
+  }
+  .skillList:nth-child(3) p:nth-child(2) {
+    margin-top: -5vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */

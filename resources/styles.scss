@@ -13,6 +13,7 @@ $txtCol: #EDF5E0;
 $bgCol: #5CDB94;
 $subhead: 5vw;
 $move: all 500ms ease-in-out;
+$mobSubHead: 8vw;
 
 /*-------------------------------NAV*/
 .nav {
@@ -581,7 +582,7 @@ footer {
 /*-----------------------Mobile*/
 @media only screen and (max-width: 480px) {
     html{
-        background-color: purple;
+        //background-color: purple;
     }
     /*---------------------NAV*/
     #nav {
@@ -648,7 +649,7 @@ footer {
         height: 100vh;
 
         h2 {
-            font-size: 8vw;
+            font-size: $mobSubHead;
         }
 
         p {
@@ -660,12 +661,12 @@ footer {
     /*----------------------------PROJECTS*/
     .port {
         flex-direction: column;
-        height: 100vh;
+        height: 200vh;
     }
 
     .testwrap {
         flex-direction: column;
-        height: 100%;
+        height: 50%;
         width: 100%;
     }
 
@@ -683,6 +684,7 @@ footer {
         height: 30vw;
         padding: 1.5vw;
         font-size: 4vw;
+        border-radius: 2vw;;
 
         h3 {
             font-size: 6vw;
@@ -692,6 +694,38 @@ footer {
         button {
             margin-top: 2vw;
             font-size: 4.2vw;
+        }
+    }
+
+    /*------------------------------SKILLS*/
+    .skills {
+        @include flexIt(space-around);
+        height: 100vh;
+
+        h1 {
+            font-size: $mobSubHead;
+            margin-bottom: 2.5vw;
+        }
+    }
+
+    .skillList {
+        @include flexIt(space-around);
+        flex-direction: column;
+        height: 50vw;
+
+        p {
+            font-size: 4.7vw;
+            width: 60%;
+            padding: 0.5vw 0;
+        }
+    }
+
+    .skillList:nth-child(3) {
+        height: 40vw;
+        margin-top: -2vw;
+
+        p:nth-child(2) {
+            margin-top: -5vw;
         }
     }
 }
