@@ -698,7 +698,7 @@ footer p {
   }
   .txt {
     width: 20vw;
-    top: 25%;
+    top: 20%;
     left: 1%;
     font-size: 18vw;
   }
@@ -724,7 +724,7 @@ footer p {
   }
   /*---------------------------ABOUT*/
   .about {
-    height: 50vw;
+    height: 100vh;
   }
   .about h2 {
     font-size: 8vw;
@@ -732,6 +732,43 @@ footer p {
   .about p {
     width: 60vw;
     font-size: 4vw;
+  }
+  /*----------------------------PROJECTS*/
+  .port {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+  }
+  .testwrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .probox {
+    width: 100vw;
+    height: 100vh;
+  }
+  .probox img {
+    width: 80vw;
+  }
+  .txtBox {
+    width: 60vw;
+    height: 30vw;
+    padding: 1.5vw;
+    font-size: 4vw;
+  }
+  .txtBox h3 {
+    font-size: 6vw;
+    margin-top: 2vw;
+  }
+  .txtBox button {
+    margin-top: 2vw;
+    font-size: 4.2vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */

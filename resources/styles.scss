@@ -614,7 +614,7 @@ footer {
 
     .txt {
         width: 20vw;
-        top: 25%;
+        top: 20%;
         left: 1%;
         font-size: 18vw;
     }
@@ -645,7 +645,7 @@ footer {
 
     /*---------------------------ABOUT*/
     .about {
-        height: 50vw;
+        height: 100vh;
 
         h2 {
             font-size: 8vw;
@@ -654,6 +654,44 @@ footer {
         p {
             width: 60vw;
             font-size: 4vw;
+        }
+    }
+
+    /*----------------------------PROJECTS*/
+    .port {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .testwrap {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    .probox {
+        width: 100vw;
+        height: 100vh;
+
+        img {
+            width: 80vw;
+        }
+    }
+
+    .txtBox {
+        width: 60vw;
+        height: 30vw;
+        padding: 1.5vw;
+        font-size: 4vw;
+
+        h3 {
+            font-size: 6vw;
+            margin-top: 2vw;
+        }
+
+        button {
+            margin-top: 2vw;
+            font-size: 4.2vw;
         }
     }
 }
