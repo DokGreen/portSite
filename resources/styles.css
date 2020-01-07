@@ -280,11 +280,14 @@
 
 .txtBox h3 {
   font-size: 2vw;
-  margin-bottom: 0.5vw;
 }
 
-.txtBox button {
-  margin-top: 1vw;
+.txtBox p {
+  margin: 1vw 0;
+}
+
+.txtBox .btn {
+  padding: 0.2vw;
   border: solid #05396B;
   font-size: 1.2vw;
   border-radius: 1vw;
@@ -515,7 +518,7 @@ footer p {
     font-size: 2.5vw;
     margin-bottom: 0.5vw;
   }
-  .txtBox button {
+  .txtBox .btn {
     margin-top: 1vw;
     border: solid #05396B;
     font-size: 2.2vw;
@@ -638,7 +641,7 @@ footer p {
   .txtBox h3 {
     font-size: 4vw;
   }
-  .txtBox button {
+  .txtBox .btn {
     font-size: 3.2vw;
     border-radius: 2vw;
   }
@@ -768,7 +771,7 @@ footer p {
     font-size: 4.7vw;
     margin: 2vw 0 1.5vw 0;
   }
-  .txtBox button {
+  .txtBox .btn {
     margin-top: 2vw;
     font-size: 5.2vw;
   }
@@ -808,6 +811,7 @@ footer p {
     width: 100%;
     padding: 1.8vw 0;
     border: solid 1vw #fff;
+    border-radius: 2vw;
   }
   .skillList:nth-child(3) {
     height: 50vw;

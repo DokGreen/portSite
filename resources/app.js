@@ -64,10 +64,10 @@ box.forEach(i => {
         txt.style.transform = "translateY(-20vw)";
         if(w <= 475){
             txt.style.transform = "translateY(-80vw)";  
-        //console.log('mobile');  
+        console.log('mobile');  
       } else {
         txt.style.transform = "translateY(-20vw)";
-        //console.log('regular');
+        console.log('regular');
       }
     })
 })

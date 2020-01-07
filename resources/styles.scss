@@ -212,7 +212,7 @@ $mobSubHead: 10vw;
 
 .txtBox {
     width: 20vw;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 1vw;
     font-size: 1vw;
     color: $mainCol;
@@ -223,11 +223,14 @@ $mobSubHead: 10vw;
 
     h3 {
         font-size: 2vw;
-        margin-bottom: 0.5vw;
     }
 
-    button {
-        margin-top: 1vw;
+    p {
+        margin: 1vw 0;
+    }
+
+    .btn {
+        padding: 0.2vw;
         border: solid $mainCol;
         font-size: 1.2vw;
         border-radius: 1vw;
@@ -431,7 +434,7 @@ footer {
             margin-bottom: 0.5vw;
         }
     
-        button {
+        .btn {
             margin-top: 1vw;
             border: solid $mainCol;
             font-size: 2.2vw;
@@ -562,7 +565,7 @@ footer {
             font-size: 4vw;
         }
 
-        button {
+        .btn {
             font-size: 3.2vw;
             border-radius: 2vw;
         }
@@ -696,7 +699,7 @@ footer {
             margin: 2vw 0 1.5vw 0;
         }
 
-        button {
+        .btn {
             margin-top: 2vw;
             font-size: 5.2vw;
         }
@@ -723,6 +726,7 @@ footer {
             width: 100%;
             padding: 1.8vw 0;
             border: solid 1vw #fff;
+            border-radius: 2vw;
         }
     }
 
