@@ -114,8 +114,13 @@
   content: " Contact";
 }
 
-#mobileNav {
+.ham {
   display: none;
+}
+
+.hamNav {
+  display: none;
+  opacity: 0;
 }
 
 .navmve {
@@ -283,7 +288,7 @@
 }
 
 .txtBox p {
-  margin: 1vw 0;
+  margin: 1.5vw 0;
 }
 
 .txtBox .btn {
@@ -291,6 +296,8 @@
   border: solid #05396B;
   font-size: 1.2vw;
   border-radius: 1vw;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .vCode {
@@ -299,9 +306,19 @@
   background-color: #05396B;
 }
 
+.vCode:hover {
+  color: #05396B;
+  background-color: transparent;
+}
+
 .vSite {
   color: #05396B;
   background-color: transparent;
+}
+
+.vSite:hover {
+  color: #EDF5E0;
+  background-color: #05396B;
 }
 
 /*------------------------------SKILLS*/
@@ -679,17 +696,128 @@ footer p {
   #mediaNav {
     display: none;
   }
-  #mobileNav {
+  /*----------------------------HAMBURGER*/
+  .ham {
+    height: 10vw;
+    width: 10vw;
+    margin-top: 8vw;
+    background-color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
-    font-size: 5vw;
+    overflow: hidden;
+    border-radius: 0.2vw;
+  }
+  .ham div {
+    width: 1vw;
+  }
+  .hamWrap div {
+    height: 0.2vw;
+    width: 2vw;
+    background-color: #000;
+  }
+  .hamWrap div:nth-child(2) {
+    margin: 0.5vw 0;
+  }
+  .midLeft, .midRight, .topLeft, .botLeft, .topRight, .botRight, .hamNav {
+    /*change speed as desired*/
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+  }
+  .ham:hover .midLeft {
+    opacity: 0;
+    -webkit-transform: translateX(-1vw);
+            transform: translateX(-1vw);
+  }
+  .ham:hover .midRight {
+    opacity: 0;
+    -webkit-transform: translateX(1vw);
+            transform: translateX(1vw);
+  }
+  .ham:hover .topLeft {
+    -webkit-transform: Rotate(40deg) translate(0.3vw, 0.2vw);
+            transform: Rotate(40deg) translate(0.3vw, 0.2vw);
+  }
+  .ham:hover .botLeft {
+    -webkit-transform: Rotate(-40deg) translate(0.3vw, -0.2vw);
+            transform: Rotate(-40deg) translate(0.3vw, -0.2vw);
+  }
+  .ham:hover .topRight {
+    -webkit-transform: Rotate(-40deg) translate(-0.3vw, 0.2vw);
+            transform: Rotate(-40deg) translate(-0.3vw, 0.2vw);
+  }
+  .ham:hover .botRight {
+    -webkit-transform: Rotate(40deg) translate(-0.3vw, -0.2vw);
+            transform: Rotate(40deg) translate(-0.3vw, -0.2vw);
+  }
+  /*----------------------------------------------HAM NAV*/
+  .hamNav {
+    width: 3vw;
+    height: 0vw;
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: -0.3vw;
+    border-radius: 0.2vw;
+    background-color: #fff;
+  }
+  .hamNav ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 0.3vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  ul li {
+    color: #000;
+    font-size: 1vw;
+  }
+  .grow {
+    height: 9vw;
+    -webkit-animation: bounce 700ms ease-in-out 300ms;
+            animation: bounce 700ms ease-in-out 300ms;
+  }
+  @-webkit-keyframes bounce {
+    0% {
+      height: 10vw;
+    }
+    50% {
+      height: 8vw;
+    }
+    100% {
+      height: 9vw;
+    }
+  }
+  @keyframes bounce {
+    0% {
+      height: 10vw;
+    }
+    50% {
+      height: 8vw;
+    }
+    100% {
+      height: 9vw;
+    }
   }
   /*----------------------------HEADER*/
   .header {

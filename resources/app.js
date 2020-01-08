@@ -82,3 +82,12 @@ box.forEach(function(i) {
       txt.style.transform = "translateY(0)";
     })
   });
+
+
+const btn = document.querySelector('.ham');
+const hamnav = document.querySelector('.hamNav');
+
+
+btn.addEventListener('click', () => {
+  hamnav.classList.toggle('grow');
+})

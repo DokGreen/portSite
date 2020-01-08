@@ -94,9 +94,15 @@ $mobSubHead: 10vw;
     content: " Contact";
 }
 
-#mobileNav {
+.ham {
     display: none;
 }
+
+.hamNav {
+    display: none;
+    opacity: 0;
+}
+
 
 .navmve {
     box-shadow: 0px 0px 10px #000;
@@ -226,7 +232,7 @@ $mobSubHead: 10vw;
     }
 
     p {
-        margin: 1vw 0;
+        margin: 1.5vw 0;
     }
 
     .btn {
@@ -234,6 +240,7 @@ $mobSubHead: 10vw;
         border: solid $mainCol;
         font-size: 1.2vw;
         border-radius: 1vw;
+        transition: $move;
     }
 }
 
@@ -241,11 +248,22 @@ $mobSubHead: 10vw;
     margin-right: 1vw;
     color: $txtCol;
     background-color: $mainCol;
+
+    &:hover {
+        color: $mainCol;
+        background-color: transparent
+
+    }
 }
 
 .vSite {
     color: $mainCol;
     background-color: transparent;
+
+    &:hover {
+        color: $txtCol;
+        background-color: $mainCol;
+    }
 }
 
 /*------------------------------SKILLS*/
@@ -604,11 +622,102 @@ footer {
         display: none;
     }
 
-    #mobileNav {
-        @include flexIt(space-around);
-        width: 100%;
-        font-size: 5vw;
-    }
+    /*----------------------------HAMBURGER*/
+    .ham {
+        height:10vw;
+        width: 10vw;
+        margin-top: 8vw;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 0.2vw;
+      }
+      
+      .ham div {
+        width: 1vw;
+      }
+      
+      .hamWrap div {
+        height: 0.2vw;
+        width: 2vw;
+        background-color: #000;
+      }
+      
+      .hamWrap div:nth-child(2) {
+        margin: 0.5vw 0;
+      }
+      
+      .midLeft, .midRight, .topLeft, .botLeft, .topRight, .botRight, .hamNav {/*change speed as desired*/
+        transition: all 300ms ease-in-out;
+      }
+      
+      .ham:hover .midLeft {
+        opacity: 0;
+        transform: translateX(-1vw)
+      }
+      .ham:hover .midRight {
+        opacity: 0;
+        transform: translateX(1vw)
+      }
+      
+      .ham:hover .topLeft {
+        transform: Rotate(40deg) translate(0.3vw, 0.2vw);
+      }
+      
+      .ham:hover .botLeft {
+        transform: Rotate(-40deg) translate(0.3vw, -0.2vw);
+      }
+      
+      .ham:hover .topRight {
+        transform: Rotate(-40deg) translate(-0.3vw, 0.2vw);
+      }
+      
+      .ham:hover .botRight {
+        transform: Rotate(40deg) translate(-0.3vw, -0.2vw);
+      }
+      
+      /*----------------------------------------------HAM NAV*/
+      .hamNav {
+        width: 3vw;
+        height: 0vw;
+        opacity: 1;
+        display: flex;
+        margin-top: -0.3vw;
+        border-radius: 0.2vw;
+        background-color: #fff;
+      }
+      
+      .hamNav ul {
+        height: 100%;
+        display: flex;
+        padding-top: 0.3vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      
+      ul li {
+        color: #000;
+        font-size: 1vw;
+      }
+      
+      .grow{
+        height: 9vw;
+        animation: bounce 700ms ease-in-out 300ms;
+      }
+      
+      
+      @keyframes bounce {
+        0% {height: 10vw;}
+        50% {height: 8vw;}
+        100% {height: 9vw;}
+      }
 
     /*----------------------------HEADER*/
     .header {
