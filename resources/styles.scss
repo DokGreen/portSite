@@ -666,12 +666,13 @@ footer {
         //background-color: purple;
     }
     /*---------------------NAV*/
-    #nav {
-        @include flexIt(center);
-
-        div {
-            display: none;
-        }
+    .nav {
+        @include flexIt(space-between);
+        width: 100vw;
+        height: 12vw;
+        box-sizing: border-box;
+        transform: translateX(-10vw);
+        overflow: hidden;
     }
 
     #siteNav {
@@ -682,11 +683,33 @@ footer {
         display: none;
     }
 
+    /*---------------------------------LOGO*/
+    #logoWrap {
+        height: 10vw;
+        width: 10vw;
+      }
+      
+      #circle {
+        height: 8.5vw;
+        width: 8.5vw;
+      }
+      
+      #aCircle {
+        position: absolute;
+        height: 9vw;
+        width: 4vw;
+      }
+      
+      .bar {
+        height: 8vw;
+        width: 0.7vw;
+        min-height: 2vw;
+      }
     /*----------------------------HAMBURGER*/
     .ham {
         @include flexIt(center);
-        height:4vw;
-        width: 4vw;
+        height:8vw;
+        width: 8vw;
         background-color: #fff;
         overflow: hidden;
         border-radius: 0.2vw;
@@ -738,12 +761,12 @@ footer {
       /*----------------------------------------------HAM NAV*/
       .hamNav {
         width: 3vw;
-        height: 0vw;
+        height: 9vw;
         opacity: 1;
         display: block;
         margin-top: 0vw;
         border-radius: 0.2vw;
-        transform: translateY(5vw);
+        transform: translateY(-5vw);
         background-color: #fff;
       }
       

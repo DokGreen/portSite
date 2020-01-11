@@ -757,25 +757,48 @@ footer p {
 /*-----------------------Mobile*/
 @media only screen and (max-width: 480px) {
   /*---------------------NAV*/
-  #nav {
+  .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  #nav div {
-    display: none;
+    width: 100vw;
+    height: 12vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: translateX(-10vw);
+            transform: translateX(-10vw);
+    overflow: hidden;
   }
   #siteNav {
     display: none;
   }
   #mediaNav {
     display: none;
+  }
+  /*---------------------------------LOGO*/
+  #logoWrap {
+    height: 10vw;
+    width: 10vw;
+  }
+  #circle {
+    height: 8.5vw;
+    width: 8.5vw;
+  }
+  #aCircle {
+    position: absolute;
+    height: 9vw;
+    width: 4vw;
+  }
+  .bar {
+    height: 8vw;
+    width: 0.7vw;
+    min-height: 2vw;
   }
   /*----------------------------HAMBURGER*/
   .ham {
@@ -788,8 +811,8 @@ footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 4vw;
-    width: 4vw;
+    height: 8vw;
+    width: 8vw;
     background-color: #fff;
     overflow: hidden;
     border-radius: 0.2vw;
@@ -839,13 +862,13 @@ footer p {
   /*----------------------------------------------HAM NAV*/
   .hamNav {
     width: 3vw;
-    height: 0vw;
+    height: 9vw;
     opacity: 1;
     display: block;
     margin-top: 0vw;
     border-radius: 0.2vw;
-    -webkit-transform: translateY(5vw);
-            transform: translateY(5vw);
+    -webkit-transform: translateY(-5vw);
+            transform: translateY(-5vw);
     background-color: #fff;
   }
   .hamNav ul {
