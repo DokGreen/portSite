@@ -96,6 +96,7 @@ $mobSubHead: 10vw;
 
             a {
                 text-decoration: none;
+                color: $mainCol;
             }
         }
     }
@@ -683,13 +684,10 @@ footer {
 
     /*----------------------------HAMBURGER*/
     .ham {
-        height:10vw;
-        width: 10vw;
-        margin-top: 8vw;
+        @include flexIt(center);
+        height:4vw;
+        width: 4vw;
         background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         overflow: hidden;
         border-radius: 0.2vw;
       }
@@ -742,19 +740,19 @@ footer {
         width: 3vw;
         height: 0vw;
         opacity: 1;
-        display: flex;
-        margin-top: -0.3vw;
+        display: block;
+        margin-top: 0vw;
         border-radius: 0.2vw;
+        transform: translateY(5vw);
         background-color: #fff;
       }
       
       .hamNav ul {
+        @include flexIt(center);
+        text-align: center;
         height: 100%;
-        display: flex;
         padding-top: 0.3vw;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
         list-style-type: none;
         padding: 0;
         margin: 0;
