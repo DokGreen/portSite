@@ -15,6 +15,64 @@ $subhead: 5vw;
 $move: all 500ms ease-in-out;
 $mobSubHead: 10vw;
 
+/*--------------------------------LOGO*/
+  #logoWrap {
+    position: relative;
+    height: 5vw;
+    width: 5vw;
+    margin-top: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #barbox {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #circle {
+      position: relative;
+    height: 3.5vw;
+    width: 3.5vw;
+    border-radius: 5vw;
+    border: solid 0.2vw $mainCol;
+    background-color: $bgCol;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 1000ms;
+  }
+  
+  #aCircle {
+    position: absolute;
+    height: 4vw;
+    width: 1vw;
+    background-color: $bgCol;
+    border-radius: 25vw;
+    position: absolute;
+    transition: $move;
+  }
+  
+  .bar {
+    height: 2vw;
+    width: 0.6vw;
+    min-height: 1vw;
+    background-color: $mainCol;
+    transition: all 500ms linear;
+    box-shadow: inset -0.2vw -0.2vw 0 #03223f;
+    z-index: 20;
+  }
+  
+  .bar:nth-child(2) {
+    height: 4vw;
+    margin: 0 0.3vw;
+  }
+
 /*-------------------------------NAV*/
 .nav {
     @include flexIt(space-between);
@@ -42,9 +100,10 @@ $mobSubHead: 10vw;
         }
     }
 
-    div {
+    /*div {
         width: 8vw;
     }
+    */
     p {
         font-weight: 600;
     }
@@ -106,7 +165,7 @@ $mobSubHead: 10vw;
 
 .navmve {
     box-shadow: 0px 0px 10px #000;
-    background-color:rgba(255,255,255,0.5);
+    background-color:rgb(255,255,255);
     z-index: 20;
 }
 

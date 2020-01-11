@@ -1,5 +1,85 @@
 /*----------MIXINS*/
 /*----------VARIABLES*/
+/*--------------------------------LOGO*/
+#logoWrap {
+  position: relative;
+  height: 5vw;
+  width: 5vw;
+  margin-top: 0.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#barbox {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#circle {
+  position: relative;
+  height: 3.5vw;
+  width: 3.5vw;
+  border-radius: 5vw;
+  border: solid 0.2vw #05396B;
+  background-color: #5CDB94;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all linear 1000ms;
+  transition: all linear 1000ms;
+}
+
+#aCircle {
+  position: absolute;
+  height: 4vw;
+  width: 1vw;
+  background-color: #5CDB94;
+  border-radius: 25vw;
+  position: absolute;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.bar {
+  height: 2vw;
+  width: 0.6vw;
+  min-height: 1vw;
+  background-color: #05396B;
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+  -webkit-box-shadow: inset -0.2vw -0.2vw 0 #03223f;
+          box-shadow: inset -0.2vw -0.2vw 0 #03223f;
+  z-index: 20;
+}
+
+.bar:nth-child(2) {
+  height: 4vw;
+  margin: 0 0.3vw;
+}
+
 /*-------------------------------NAV*/
 .nav {
   display: -webkit-box;
@@ -23,6 +103,10 @@
   color: #05396B;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+  /*div {
+        width: 8vw;
+    }
+    */
 }
 
 .nav ul {
@@ -35,10 +119,6 @@
 
 .nav ul li a {
   text-decoration: none;
-}
-
-.nav div {
-  width: 8vw;
 }
 
 .nav p {
@@ -126,7 +206,7 @@
 .navmve {
   -webkit-box-shadow: 0px 0px 10px #000;
           box-shadow: 0px 0px 10px #000;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
   z-index: 20;
 }
 

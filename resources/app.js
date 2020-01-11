@@ -1,4 +1,39 @@
-//find the navc
+//logo motion
+function rNum(min, max) {
+  return Math.floor(Math.random(min) * max);
+}
+
+
+const circle = document.querySelector('#circle');
+
+//get all the bars
+const bars = document.querySelector('#barbox');
+
+const bar1 = bars.children[0];
+const bar2 = bars.children[1];
+const bar3 = bars.children[2];
+
+document.addEventListener('click', () => {
+  
+  num1 = rNum(0, 360);
+  num3 = rNum(2, 4);
+
+//console.log(num1, num2);
+  
+  circle.style.transform = "rotate("+num1+"deg)";
+  
+  //inefficient method but it works
+  bar1.style.height = num3+"vw";
+  num3 = rNum(2, 4);
+  bar2.style.height = num3+"vw";
+  num3 = rNum(2, 4);
+  bar3.style.height = num3+"vw";
+})
+
+
+
+//find the nav
+const aCir = document.querySelector('#aCircle');
 const nav = document.querySelector(".nav");
 const w = window.innerWidth;
 
@@ -10,8 +45,12 @@ window.addEventListener("scroll", () => {
     
     if(top != 0){
         nav.classList.add("navmve");
+        circle.style.background = `rgb(255,255,255)`;
+        aCircle.style.background = `rgb(255,255,255)`;        
     } else {
         nav.classList.remove("navmve");
+        circle.style.background = "#5CDB94";
+        aCircle.style.background = "#5CDB94";
     }
 
     //header imgs
