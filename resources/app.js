@@ -101,12 +101,12 @@ box.forEach(i => {
         pic.style.filter = "blur(2px)";
         pic.style.transform = `translate(${imgX}px, ${imgY}px) scale(2)`;
         txt.style.transform = "translateY(-20vw)";
-        if(w <= 475 && window.matchMedia("(orientation: portrait)").matches){
+        if(w <= 475 && window.orientation == 0){
             txt.style.transform = "translateY(-80vw)";  
-        //console.log('mobile');  
-      } else if(window.matchMedia("(orientation: landscape)").matches){
+        alert('Portrait');  
+      } else if(window.orientation == -90 || window.orientation == 90){
         txt.style.transform = "translateY(-10vw)";
-        alert("landscape")
+        alert("landscape");
       } else {
         txt.style.transform = "translateY(-20vw)";
         //console.log('regular');
