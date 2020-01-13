@@ -105,8 +105,8 @@ box.forEach(i => {
             txt.style.transform = "translateY(-80vw)";  
         //console.log('mobile');  
       } else if(window.matchMedia("(orientation: landscape)").matches){
-        txt.style.transform = "translateY(-20vw)";
-
+        txt.style.transform = "translateY(-10vw)";
+        alert("landscape")
       } else {
         txt.style.transform = "translateY(-20vw)";
         //console.log('regular');
