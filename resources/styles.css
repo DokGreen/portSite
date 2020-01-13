@@ -65,8 +65,9 @@
 
 .bar {
   height: 2vw;
-  width: 0.6vw;
+  width: 0.4vw;
   min-height: 1vw;
+  max-height: 4vw;
   background-color: #05396B;
   -webkit-transition: all 500ms linear;
   transition: all 500ms linear;
@@ -195,13 +196,8 @@
   content: " Contact";
 }
 
-.ham {
+#mobNav {
   display: none;
-}
-
-.hamNav {
-  display: none;
-  opacity: 0;
 }
 
 .navmve {
@@ -768,7 +764,7 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
     width: 100vw;
-    height: 12vw;
+    height: 15vw;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     -webkit-transform: translateX(-10vw);
@@ -781,148 +777,40 @@ footer p {
   #mediaNav {
     display: none;
   }
+  #mobNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 75vw;
+    padding-right: 3vw;
+    font-size: 6vw;
+  }
   /*---------------------------------LOGO*/
   #logoWrap {
-    height: 10vw;
-    width: 10vw;
+    height: 15vw;
+    width: 15vw;
   }
   #circle {
-    height: 8.5vw;
-    width: 8.5vw;
+    height: 10.5vw;
+    width: 10.5vw;
+    border: solid 0.8vw #05396B;
   }
   #aCircle {
     position: absolute;
-    height: 9vw;
+    height: 11vw;
     width: 4vw;
   }
   .bar {
-    height: 8vw;
-    width: 0.7vw;
+    height: 12vw;
+    width: 0.8vw;
     min-height: 2vw;
-  }
-  /*----------------------------HAMBURGER*/
-  .ham {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 8vw;
-    width: 8vw;
-    background-color: #fff;
-    overflow: hidden;
-    border-radius: 0.2vw;
-  }
-  .ham div {
-    width: 1vw;
-  }
-  .hamWrap div {
-    height: 0.2vw;
-    width: 2vw;
-    background-color: #000;
-  }
-  .hamWrap div:nth-child(2) {
-    margin: 0.5vw 0;
-  }
-  .midLeft, .midRight, .topLeft, .botLeft, .topRight, .botRight, .hamNav {
-    /*change speed as desired*/
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-  }
-  .ham:hover .midLeft {
-    opacity: 0;
-    -webkit-transform: translateX(-1vw);
-            transform: translateX(-1vw);
-  }
-  .ham:hover .midRight {
-    opacity: 0;
-    -webkit-transform: translateX(1vw);
-            transform: translateX(1vw);
-  }
-  .ham:hover .topLeft {
-    -webkit-transform: Rotate(40deg) translate(0.3vw, 0.2vw);
-            transform: Rotate(40deg) translate(0.3vw, 0.2vw);
-  }
-  .ham:hover .botLeft {
-    -webkit-transform: Rotate(-40deg) translate(0.3vw, -0.2vw);
-            transform: Rotate(-40deg) translate(0.3vw, -0.2vw);
-  }
-  .ham:hover .topRight {
-    -webkit-transform: Rotate(-40deg) translate(-0.3vw, 0.2vw);
-            transform: Rotate(-40deg) translate(-0.3vw, 0.2vw);
-  }
-  .ham:hover .botRight {
-    -webkit-transform: Rotate(40deg) translate(-0.3vw, -0.2vw);
-            transform: Rotate(40deg) translate(-0.3vw, -0.2vw);
-  }
-  /*----------------------------------------------HAM NAV*/
-  .hamNav {
-    width: 3vw;
-    height: 9vw;
-    opacity: 1;
-    display: block;
-    margin-top: 0vw;
-    border-radius: 0.2vw;
-    -webkit-transform: translateY(-5vw);
-            transform: translateY(-5vw);
-    background-color: #fff;
-  }
-  .hamNav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    height: 100%;
-    padding-top: 0.3vw;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-  }
-  ul li {
-    color: #000;
-    font-size: 1vw;
-  }
-  .grow {
-    height: 9vw;
-    -webkit-animation: bounce 700ms ease-in-out 300ms;
-            animation: bounce 700ms ease-in-out 300ms;
-  }
-  @-webkit-keyframes bounce {
-    0% {
-      height: 10vw;
-    }
-    50% {
-      height: 8vw;
-    }
-    100% {
-      height: 9vw;
-    }
-  }
-  @keyframes bounce {
-    0% {
-      height: 10vw;
-    }
-    50% {
-      height: 8vw;
-    }
-    100% {
-      height: 9vw;
-    }
+    max-height: 14vw;
   }
   /*----------------------------HEADER*/
   .header {

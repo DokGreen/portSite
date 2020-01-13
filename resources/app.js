@@ -16,7 +16,7 @@ const bar3 = bars.children[2];
 document.addEventListener('click', () => {
   
   num1 = rNum(0, 360);
-  num3 = rNum(2, 4);
+  num3 = rNum(2, 14);
 
 //console.log(num1, num2);
   
@@ -24,9 +24,9 @@ document.addEventListener('click', () => {
   
   //inefficient method but it works
   bar1.style.height = num3+"vw";
-  num3 = rNum(2, 4);
+  num3 = rNum(2, 14);
   bar2.style.height = num3+"vw";
-  num3 = rNum(2, 4);
+  num3 = rNum(2, 14);
   bar3.style.height = num3+"vw";
 })
 
@@ -101,7 +101,7 @@ box.forEach(i => {
         pic.style.filter = "blur(2px)";
         pic.style.transform = `translate(${imgX}px, ${imgY}px) scale(2)`;
         txt.style.transform = "translateY(-20vw)";
-        if(w <= 475){
+        if(w <= 475 /*&& window.matchMedia("(orientation: portrait)").matches*/){
             txt.style.transform = "translateY(-80vw)";  
         console.log('mobile');  
       } else {
@@ -121,12 +121,3 @@ box.forEach(function(i) {
       txt.style.transform = "translateY(0)";
     })
   });
-
-
-const btn = document.querySelector('.ham');
-const hamnav = document.querySelector('.hamNav');
-
-
-btn.addEventListener('click', () => {
-  hamnav.classList.toggle('grow');
-})
