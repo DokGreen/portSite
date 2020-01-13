@@ -101,7 +101,7 @@ box.forEach(i => {
         pic.style.filter = "blur(2px)";
         pic.style.transform = `translate(${imgX}px, ${imgY}px) scale(2)`;
         txt.style.transform = "translateY(-20vw)";
-        if(w <= 475 /*&& window.matchMedia("(orientation: portrait)").matches*/){
+        if(w <= 475 && window.matchMedia("(orientation: portrait)").matches){
             txt.style.transform = "translateY(-80vw)";  
         console.log('mobile');  
       } else {
