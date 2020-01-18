@@ -102,11 +102,11 @@ box.forEach(i => {
         pic.style.transform = `translate(${imgX}px, ${imgY}px) scale(2)`;
         txt.style.transform = "translateY(-20vw)";
         if(w <= 475 && window.orientation == 0){
-            txt.style.transform = "translateY(-80vw)";  
-        alert('Portrait');  
+            txt.style.transform = "translateY(-75vw)";  
+        //alert('Portrait');  
       } else if(window.orientation == -90 || window.orientation == 90){
-        txt.style.transform = "translateY(-10vw)";
-        alert("landscape");
+        txt.style.transform = "translateY(-20vw)";
+        //alert("landscape");
       } else {
         txt.style.transform = "translateY(-20vw)";
         //console.log('regular');
@@ -124,3 +124,14 @@ box.forEach(function(i) {
       txt.style.transform = "translateY(0)";
     })
   });
+
+//--------------smoothScroll
+ let ops = document.querySelectorAll('.navOp');
+ ops.forEach(i => {
+    i.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
